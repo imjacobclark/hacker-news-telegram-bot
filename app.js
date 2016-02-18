@@ -1,7 +1,6 @@
 'use strict';
 
 let TelegramBot = require('node-telegram-bot-api');
-var Firebase = require("firebase");
 let request = require('request-promise');
 
 let TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
