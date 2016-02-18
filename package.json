@@ -1,0 +1,30 @@
+{
+  "name": "hacker-news-telegram-bot",
+  "version": "0.0.1",
+  "description": "A Hacker News bot for Telegram",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imjacobclark/hacker-news-telegram-bot.git"
+  },
+  "keywords": [
+    "hacker",
+    "news",
+    "telegram",
+    "bot"
+  ],
+  "author": "Jacob Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imjacobclark/hacker-news-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/imjacobclark/hacker-news-telegram-bot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.20.1",
+    "request-promise": "^2.0.1"
+  }
+}
