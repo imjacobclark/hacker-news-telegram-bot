@@ -3,7 +3,7 @@
 let TelegramBot = require('node-telegram-bot-api');
 let request = require('request-promise');
 
-let TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
+let TelegramBotToken = '181738313:AAEpiHaCbDwhKROlir4rForfxF-Zy4asH7Y';
 let telegramBot = new TelegramBot(TelegramBotToken, { polling: true });
 
 let registeredUsers = [], previousTopStories = [];
@@ -16,16 +16,15 @@ function getTopStory(){
 
 function pushTopStory(story){
     registeredUsers.forEach(user => telegramBot.sendMessage(user, story.title + ' - ' + story.url));
-    currentTopStory = story.id;
+    previousTopStories.push(story.id);
 }
 
 setInterval(() => {
      getTopStory().then(data => {
         data = JSON.parse(data);
 
-        if(previousTopStories.includes(data.id)){
+        if(previousTopStories.indexOf(data.id) === -1){
             pushTopStory(data);
-            previousTopStories.push(msg.from.id);
         }
      });
 }, 10000);
