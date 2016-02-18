@@ -23,7 +23,7 @@ setInterval(() => {
      getTopStory().then(data => {
         data = JSON.parse(data);
 
-        if(!previousTopStories.includes(data.id)){
+        if(previousTopStories.includes(data.id)){
             pushTopStory(data);
             previousTopStories.push(msg.from.id);
         }
