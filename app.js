@@ -3,7 +3,7 @@
 let TelegramBot = require('node-telegram-bot-api');
 let request = require('request-promise');
 
-let TelegramBotToken = '181738313:AAEpiHaCbDwhKROlir4rForfxF-Zy4asH7Y';
+let TelegramBotToken = process.env.TELEGRAM_BOT_TOKEN;
 let telegramBot = new TelegramBot(TelegramBotToken, { polling: true });
 
 let registeredUsers = [], previousTopStories = [];
